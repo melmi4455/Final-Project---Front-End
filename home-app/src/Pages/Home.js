@@ -41,7 +41,7 @@ function Home () {
             <img src="./Home-rent.jpg" alt="images" className="h-40 px-10"/>
                <div className="-space-y-16">
                <h3 className="text-2xl font-bold mb-20">Renting your House/Apartment?</h3>
-               <h3 className="pb-8">With our immense real-time rental database and advanced search,we make it easy to upload your perfect Apartment and House for you!</h3>
+               <h3 className="pb-8">With our immense real-time rental database and advanced search,we make it easy to upload your perfect Apartment and House for you to rent!</h3>
                <button className=" bg-gray-200 p-2 ml-28 text-black font-bold rounded-2xl px-10 drop-shadow-lg border">Upload Here</button>
                </div>
             </div>
