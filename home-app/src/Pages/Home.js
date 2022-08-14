@@ -14,9 +14,16 @@ function Home() {
         <div className=" flex justify-center">
           <FeatureCars />
         </div>
+
       </div>
     </div>
   );
+
+       
+        
+        
+    )
+
 }
 
 export default Home;
