@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-  text-align: center;
+body {
+  color: #dfdfde;
 }
+/* <<<<<<< SignUp
+======= */
 
 .App-logo {
   height: 40vmin;
@@ -55,3 +57,4 @@
 .input{
   @apply px-3 py-2 rounded-sm bg-gray-100 text-sm;
 }
+/* >>>>>>> main */
