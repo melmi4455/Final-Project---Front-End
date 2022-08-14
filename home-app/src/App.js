@@ -1,12 +1,39 @@
-import './App.css';
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-import Login from "./Pages/Login"
-import Home from "./Pages/Home"
-
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./Pages/Login";
+import Home from "./Pages/Home";
+import Header from "./Components/Header";
+import SignUp from "./Pages/SignUp";
+import PropertyList from "./Pages/PropertyList";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <div>
-    <Home/>
+      <BrowserRouter>
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+
+          <Route path="/list" element={<PropertyList />} />
+        </Routes>
+
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </BrowserRouter>
     </div>
   );
 }
