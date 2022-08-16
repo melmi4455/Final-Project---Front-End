@@ -11,7 +11,7 @@ const FeatureCars = () => {
       >
         <div
           className=" bg-white text-gray-700 w-72 min-h-[10rem] 
-        shadow-lg rounded-md overflow-hidden"
+        shadow-2xl rounded-md overflow-hidden"
         >
           <div>
             <img

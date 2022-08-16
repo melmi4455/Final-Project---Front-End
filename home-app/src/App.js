@@ -1,14 +1,16 @@
-
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
+
 import SignUp from "./Pages/SignUp";
 import Details from "./Pages/Details";
 import PropertyList from "./Pages/PropertyList";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import About from "./Components/About";
 function App() {
   return (
     <div>
@@ -23,6 +25,7 @@ function App() {
 
           <Route path="/list" element={<PropertyList />} />
         </Routes>
+        <About />
 
         <ToastContainer
           position="top-right"
@@ -36,8 +39,6 @@ function App() {
           pauseOnHover
         />
       </BrowserRouter>
-
-
     </div>
   );
 }
