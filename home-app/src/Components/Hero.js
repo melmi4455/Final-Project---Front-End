@@ -5,7 +5,7 @@ const Hero = () => {
     <div>
       <div className=" bg-blue-400 h-80 flex justify-center items-center">
         <div className="flex flex-col items-center">
-          <h3 className="font-bold p-2 text-2xl text-white">
+          <h3 className="font-bold p-2 text-4xl text-white">
             Find a Rent when you want at the right price
           </h3>
           <div className="flex">
