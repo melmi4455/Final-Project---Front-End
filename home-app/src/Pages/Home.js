@@ -24,7 +24,7 @@ function Home() {
         </div>
       </div>
       {/* How it work */}
-      <h2 className="text-center font-bold text-2xl">How it works</h2>
+      <h2 className="text-center font-bold text-2xl p-10">How it works</h2>
       <HowItWorks />
     </div>
   );
