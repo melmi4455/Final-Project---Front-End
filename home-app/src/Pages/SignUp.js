@@ -38,7 +38,7 @@ const SignUp = () => {
           />
           <input
             type="email"
-            placeholder=" email"
+            placeholder=" Email"
             className="px-3 py-1 rounded-sm outline-none"
             onChange={(e) => setInput({ ...input, email: e.target.value })}
           />
@@ -50,7 +50,7 @@ const SignUp = () => {
           />
           <input
             type="password"
-            placeholder=" confirm password"
+            placeholder=" Confirm password"
             className="px-3 py-1 rounded-sm outline-none"
             onChange={(e) =>
               setInput({ ...input, confirmPassword: e.target.value })

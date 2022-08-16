@@ -7,6 +7,7 @@ import Header from "./Components/Header";
 import SignUp from "./Pages/SignUp";
 import Details from "./Pages/Details";
 import PropertyList from "./Pages/PropertyList";
+import Footer from "./Components/Footer"
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -26,6 +27,8 @@ function App() {
           <Route path="/list" element={<PropertyList />} />
         </Routes>
         <About />
+
+        <Footer/>
 
         <ToastContainer
           position="top-right"

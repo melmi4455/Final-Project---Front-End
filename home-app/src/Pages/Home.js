@@ -30,6 +30,14 @@ function Home() {
       <HowItWorks />
     </div>
   );
+
+
+       
+        
+        
+    
+
+
 }
 
 export default Home;
