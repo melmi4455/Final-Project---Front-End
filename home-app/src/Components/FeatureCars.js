@@ -11,7 +11,7 @@ const FeatureCars = () => {
       >
         <div
           className=" bg-white text-gray-700 w-72 min-h-[10rem] 
-        shadow-lg rounded-md overflow-hidden"
+        shadow-2xl rounded-md overflow-hidden"
         >
           <div>
             <img
@@ -36,8 +36,8 @@ const FeatureCars = () => {
                 <p>4 Bedrooms</p>
               </div>
             </div>
-            <div className="pl-28">
-              <button className="bg-blue-500 text-white font-bold text-sm justify-end p-2 rounded-lg">
+            <div className="">
+              <button className="bg-blue-500 text-white font-bold text-sm justify-end  rounded-lg p-2">
                 Book now
               </button>
             </div>

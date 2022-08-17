@@ -10,7 +10,7 @@ function Home() {
       <Hero />
       {/* FeatureCars */}
       <div className="px-20 py-5">
-        <h2 className="text-center font-bold text-3xl">
+        <h2 className="text-center font-bold text-3xl py-10">
           Find the best property
         </h2>
         <div className=" flex justify-center ">
@@ -24,7 +24,9 @@ function Home() {
         </div>
       </div>
       {/* How it work */}
-      <h2 className="text-center font-bold text-2xl p-10">How it works</h2>
+      <h2 className="text-center font-bold text-2xl pt-20 py-2">
+        How it works
+      </h2>
       <HowItWorks />
     </div>
   );

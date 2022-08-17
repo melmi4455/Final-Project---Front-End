@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="flex justify-between items-center py-5 px-10 border bg-gray-50 ">
+    <div className="flex justify-between items-center py-5 px-10 border bg-gray-50  text-lg text-blue-700">
       <div className="items-center ">
-      <img src= "../Logo.jpg" alt="images" className="h-20"  />
+        <img src="../Logo.jpg" alt="images" className="h-20" />
       </div>
       <div className="space-x-3 cursor-pointer  ">
-        <Link to="/home" className="text-sm hover:border-b-4">
+        <Link to="/" className="text-sm hover:border-b-4">
           Home
         </Link>
         <Link to="/Property List" className="text-sm hover:border-b-4">

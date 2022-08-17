@@ -4,7 +4,7 @@ const HowItWorks = () => {
   return (
     <div className=" flex justify-center px-3 py-6">
       <div className="grid grid-cols-2 gap-10">
-        <div className="flex  items-center space-x-2">
+        <div className="flex  items-center space-x-5">
           <img
             src={require("../img/search.png")}
             alt="home"
@@ -21,7 +21,7 @@ const HowItWorks = () => {
             </button>
           </div>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-5">
           <img
             src={require("../img/home.jpg")}
             alt="home"
@@ -38,7 +38,7 @@ const HowItWorks = () => {
             </button>
           </div>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-5">
           <img
             src={require("../img/hand.jpg")}
             alt="home"
@@ -55,13 +55,13 @@ const HowItWorks = () => {
             </button>
           </div>
         </div>
-        <div className="flex  items-center space-x-2">
+        <div className="flex  items-center space-x-5">
           <img
             src={require("../img/hand.jpg")}
             alt="home"
             className="w-20 h-12"
           />
-          <div>
+          <div className="px-3 ">
             <h3>
               home rental is a premier real estate portal for<br></br>
               property owners to maximize exposure and<br></br>
