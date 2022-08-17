@@ -3,9 +3,18 @@ import { RiNumber1, RiNumber2, RiNumber3, RiNumber4 } from "react-icons/ri";
 
 const About = () => {
   return (
-    <div className="px-10 py-5 ">
-      <h3 className="text-center text-lg font-bold">About Us</h3>
-
+    <div className="px-20 py-20 ">
+      <div className="flex flex-col justify-center items-center shadow-sm w-full">
+        <h3 className="text-2xl font-bold ">About Us</h3>
+        <p>
+          <span className="text-2xl font-bold text-blue-700">We</span> are lorem
+          Lorem ipsum dolor sit amet, consectetur
+          <br></br>
+          adipiscing elit, sed do eiusmod tempor incididunt ut<br></br>
+          labore et dolore magna aliqua. Ut enim ad minim veniam,<br></br>
+          quis nostrud exercitation ullamco laboris nisi ut aliquip
+        </p>
+      </div>
       <div className=" flex justify-center px-3 py-6">
         <div
           className="grid grid-cols-2 gap-10 bg-white text-gray-700 w-3/4 min-h-[10rem] 
@@ -15,6 +24,7 @@ const About = () => {
             <RiNumber1 size={20} className="text-blue-500 rounded-full" />
 
             <div>
+              <h3 className="text-center font-bold p-1">Our mission</h3>
               <h3>
                 With our immense real-time rental database<br></br>
                 and advanced search, we make it easy to find<br></br>
@@ -25,6 +35,7 @@ const About = () => {
           <div className="flex items-center space-x-2">
             <RiNumber2 size={20} className="text-blue-500 rounded-full" />
             <div>
+              <h3 className="text-center font-bold p-1">Our mission</h3>
               <h3>
                 Discover your new home or condo using our targeted<br></br>
                 filters Browse images, <br></br>floor plans, video, and 3D tours
@@ -34,6 +45,7 @@ const About = () => {
           <div className="flex items-center space-x-2 px-3 py-2">
             <RiNumber3 size={20} className="text-blue-500 rounded-full" />
             <div>
+              <h3 className="text-center font-bold p-1">Our Vision</h3>
               <h3>
                 home rental is a premier real estate portal for<br></br>
                 property owners to maximize exposure and<br></br>
@@ -44,6 +56,7 @@ const About = () => {
           <div className="flex  items-center space-x-2 px-3 py-2">
             <RiNumber4 size={20} className="text-blue-500 rounded-full" />
             <div>
+              <h4 className="text-center font-bold p-1">Our Services</h4>
               <h3>
                 home rental is a premier real estate portal for<br></br>
                 property owners to maximize exposure and<br></br>
