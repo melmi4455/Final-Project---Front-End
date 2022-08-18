@@ -15,12 +15,12 @@ const About = () => {
           quis nostrud exercitation ullamco laboris nisi ut aliquip
         </p>
       </div>
-      <div className=" flex justify-center px-3 py-6">
+      <div className=" flex justify-center px-3 py-6 ">
         <div
           className="grid grid-cols-2 gap-10 bg-white text-gray-700 w-3/4 min-h-[10rem] 
-        shadow-lg rounded-md overflow-hidden"
+        shadow-lg rounded-md overflow-hidden "
         >
-          <div className="flex  items-center space-x-2">
+          <div className="flex  items-center space-x-2 px-3 py-2 border border-r-yellow-500 ">
             <RiNumber1 size={20} className="text-blue-500 rounded-full" />
 
             <div>
@@ -32,7 +32,7 @@ const About = () => {
               </h3>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 border border-r-yellow-500">
             <RiNumber2 size={20} className="text-blue-500 rounded-full" />
             <div>
               <h3 className="text-center font-bold p-1">Our mission</h3>
@@ -42,7 +42,8 @@ const About = () => {
               </h3>
             </div>
           </div>
-          <div className="flex items-center space-x-2 px-3 py-2">
+
+          <div className="flex items-center space-x-2 px-3 py-2 border border-r-yellow-500">
             <RiNumber3 size={20} className="text-blue-500 rounded-full" />
             <div>
               <h3 className="text-center font-bold p-1">Our Vision</h3>
@@ -53,7 +54,7 @@ const About = () => {
               </h3>
             </div>
           </div>
-          <div className="flex  items-center space-x-2 px-3 py-2">
+          <div className="flex  items-center space-x-2 px-3 py-2 border border-r-yellow-500">
             <RiNumber4 size={20} className="text-blue-500 rounded-full" />
             <div>
               <h4 className="text-center font-bold p-1">Our Services</h4>

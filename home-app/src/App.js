@@ -23,7 +23,7 @@ function App() {
 
           <Route path="/signup" element={<SignUp />} />
 
-          <Route path="/list" element={<PropertyList />} />
+          <Route path="/PropertyList" element={<PropertyList />} />
         </Routes>
 
         <About />
