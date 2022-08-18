@@ -11,7 +11,7 @@ function Header() {
         <Link to="/" className="text-sm hover:border-b-4">
           Home
         </Link>
-        <Link to="/Property List" className="text-sm hover:border-b-4">
+        <Link to="/PropertyList" className="text-sm border- border-b-blue-700">
           List
         </Link>
         <Link to="/Services" className="text-sm hover:border-b-4">
