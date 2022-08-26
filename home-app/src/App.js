@@ -10,11 +10,16 @@ import PropertyList from "./Pages/PropertyList";
 import Footer from "./Components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import About from "./Components/About";
+
+import { UserContext } from "./Utils/UserContext";
+import { useState } from "react";
+import Login from "./Pages/Login";
+import NewHome from "./Pages/NewHome";
 function App() {
+  const [user, SetUser] = useState(null);
   return (
-    <div>
+    <UserContext.Provider Value={{ user, SetUser }}>
       <BrowserRouter>
         <Header />
 
@@ -22,8 +27,10 @@ function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/Login" element={<Login />} />
 
           <Route path="/PropertyList" element={<PropertyList />} />
+          <Route path="/NewHome" element={<NewHome />} />
         </Routes>
 
         <About />
@@ -41,7 +48,7 @@ function App() {
           pauseOnHover
         />
       </BrowserRouter>
-    </div>
+    </UserContext.Provider>
   );
 }
 

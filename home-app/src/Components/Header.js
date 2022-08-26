@@ -21,9 +21,13 @@ function Header() {
           Abouts
         </Link>
       </div>
-      <div>
+      <div className="space-x-2">
         <button className="text-bold text-white bg-blue-500 rounded-md p-2">
           <Link to="/SignUp">SignUp</Link>
+        </button>
+
+        <button className="text-bold text-white bg-blue-500 rounded-md p-2">
+          <Link to="/NewHome">Upload</Link>
         </button>
       </div>
     </div>
