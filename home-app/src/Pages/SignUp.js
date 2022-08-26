@@ -19,6 +19,7 @@ const SignUp = () => {
       const res = await axios.post("http://localhost:7000/user/signUp", input);
       console.log(res);
       toast.success(res.data.message);
+
       navigate("/home");
     } catch (e) {
       console.log(e);
@@ -56,6 +57,13 @@ const SignUp = () => {
               setInput({ ...input, confirmPassword: e.target.value })
             }
           />
+          <select
+            className="px-3 py-1 rounded-sm outline-none"
+            onChange={(e) => setInput({ ...input, role: e.target.value })}
+          >
+            <option value="user">User</option>
+            <option value="owner">Home Owner</option>
+          </select>
           <input
             type="text"
             placeholder=" Phone Number"

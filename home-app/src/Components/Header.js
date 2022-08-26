@@ -11,7 +11,7 @@ function Header() {
         <Link to="/" className="text-sm hover:border-b-4">
           Home
         </Link>
-        <Link to="/Property List" className="text-sm hover:border-b-4">
+        <Link to="/PropertyList" className="text-sm border- border-b-blue-700">
           List
         </Link>
         <Link to="/Services" className="text-sm hover:border-b-4">
@@ -21,9 +21,13 @@ function Header() {
           Abouts
         </Link>
       </div>
-      <div>
+      <div className="space-x-2">
         <button className="text-bold text-white bg-blue-500 rounded-md p-2">
           <Link to="/SignUp">SignUp</Link>
+        </button>
+
+        <button className="text-bold text-white bg-blue-500 rounded-md p-2">
+          <Link to="/NewHome">Upload</Link>
         </button>
       </div>
     </div>

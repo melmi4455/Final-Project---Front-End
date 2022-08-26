@@ -16,7 +16,7 @@ const HowItWorks = () => {
               and advanced search, we make it easy to find<br></br>
               the perfect Boston apartment.<br></br>
             </h3>
-            <button className="bg-blue-400 text-white font-bold text-sm rounded-md p-2 m-2">
+            <button className="border border-blue-500 text-blue-500 font-bold text-sm rounded-md p-2 m-2">
               Search for Rents
             </button>
           </div>
@@ -33,7 +33,7 @@ const HowItWorks = () => {
               filters Browse images, <br></br>floor plans, video, and 3D tours
             </h3>
 
-            <button className="bg-blue-400 text-white font-bold text-sm rounded-md p-2 m-2">
+            <button className="border border-blue-500 text-blue-500 font-bold text-sm rounded-md p-2 m-2">
               Search for Rents
             </button>
           </div>
@@ -50,7 +50,7 @@ const HowItWorks = () => {
               property owners to maximize exposure and<br></br>
               lease properties faster.
             </h3>
-            <button className="bg-blue-400 text-white font-bold text-sm rounded-md p-2 m-2">
+            <button className="border border-blue-500 text-blue-500 font-bold text-sm rounded-md p-2 m-2">
               Search for Rents
             </button>
           </div>
@@ -61,13 +61,13 @@ const HowItWorks = () => {
             alt="home"
             className="w-20 h-12"
           />
-          <div className="px-3 ">
+          <div className="px-3  ">
             <h3>
               home rental is a premier real estate portal for<br></br>
               property owners to maximize exposure and<br></br>
               lease properties faster.
             </h3>
-            <button className="bg-blue-400 text-white font-bold text-sm rounded-md p-2 m-2">
+            <button className=" text-blue-600 font-bold text-sm rounded-md p-2 m-2 border border-blue-600">
               Search for Rents
             </button>
           </div>
