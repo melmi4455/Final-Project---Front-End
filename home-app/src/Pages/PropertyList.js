@@ -1,5 +1,9 @@
 import React from "react";
+
 // import HomeDetails from "../Components/HomeDetails";
+
+import HomeDetails from "../Components/HomeDetails";
+
 import ListCard from "../Components/ListCard";
 
 const PropertyList = () => {
@@ -62,6 +66,7 @@ const PropertyList = () => {
         </div>
       </div>
       <ListCard />
+      <HomeDetails />
     </div>
   );
 };
