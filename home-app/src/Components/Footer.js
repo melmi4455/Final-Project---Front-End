@@ -1,7 +1,20 @@
 import {BsFacebook,BsWhatsapp,BsTwitter,BsInstagram} from "react-icons/bs"
+import { useContext } from "react";
+import { InfoContext } from "../Utilities/InfoContext";
+import {useNavigate} from "react-router-dom"
 
 
 function Footer () {
+
+    const {info,setInfo} = useContext(InfoContext)
+    const navigate = useNavigate()
+
+
+    function Logout(){
+        localStorage.removeItem("token");
+        setInfo(false);
+        navigate("/login")
+    }
 
     return (
         <div>
@@ -34,6 +47,11 @@ function Footer () {
                     
                     
                     </div>
+            </div>
+            <div className="bg-blue-600 flex justify-center pb-10">
+                {info?(<button className="font-bold text-blue-500 bg-white rounded-md p-2" onClick={Logout}>Logout</button>):
+                <div></div>}
+                
             </div>
         </div>
     )

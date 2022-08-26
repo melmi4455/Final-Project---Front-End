@@ -1,29 +1,24 @@
 import axios from "axios";
 import React, { useState , useEffect } from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { useContext } from "react";
-import { InfoContext } from "../Utilities/InfoContext";
 
-const SignUp = () => {
+const UpdateProfile = () => {
   const [input, setInput] = useState({});
   const navigate = useNavigate();
-  const{setInfo} = useContext(InfoContext);
+  
 
-  // useEffect(()=>{
-  //   const token = localStorage.removeItem("token");
-  // }, []);
+
   
 
   async function Submit() {
     try {
-      const res = await axios.post("http://localhost:7000/user/", input);
+      const res = await axios.put("http://localhost:7000/user/updateprofile", input);
       console.log(res);
       toast.success(res.data.message);
-      localStorage.setItem("token" , res.data.token);
-      navigate("/owner/newhome");
-      setInfo(true);
+    //   localStorage.setItem("token" , res.data.token);
+      navigate("/");
     } catch (e) {
       toast.error(e.response.data.message);
     }
@@ -31,7 +26,7 @@ const SignUp = () => {
   return (
     <div className="flex justify-center mt-6 ">
       <div className="bg-blue-400 w-2/5 text-center py-4 drop-shadow-md">
-        <h1>SignUp</h1>
+        <h1>Update Profile</h1>
         <div className="flex flex-col w-3/5 m-auto space-y-2 my-4">
           <input
             type="text"
@@ -47,19 +42,19 @@ const SignUp = () => {
           />
           <input
             type="password"
-            placeholder=" Password"
+            placeholder=" Old Password"
             className="px-3 py-1 rounded-sm outline-none"
-            onChange={(e) => setInput({ ...input, password: e.target.value })}
+            onChange={(e) => setInput({ ...input, oldPassword: e.target.value })}
           />
           <input
             type="password"
-            placeholder=" Confirm password"
+            placeholder=" New password"
             className="px-3 py-1 rounded-sm outline-none"
             onChange={(e) =>
-              setInput({ ...input, confirmPassword: e.target.value })
+              setInput({ ...input, newPassword: e.target.value })
             }
           />
-          <input
+          {/* <input
             type="text"
             placeholder=" Phone Number"
             className="px-3 py-1 rounded-sm outline-none"
@@ -70,15 +65,15 @@ const SignUp = () => {
             placeholder=" Address"
             className="px-3 py-1 rounded-md outline-none"
             onChange={(e) => setInput({ ...input, address: e.target.value })}
-          />
+          /> */}
         </div>
         <button className="text-center text-blue-500 rounded-md font-bold bg-white p-2 color-white" onClick={Submit}>
-          Submit
+          Update
         </button>
-        <div className="pt-2 text-white font-bold">Already have an account? <Link to="/login">Log in here!</Link></div>
+        {/* <div className="pt-2 text-white font-bold">Already have an account? <Link to="/login">Log in here!</Link></div> */}
       </div>
     </div>
   );
 };
 
-export default SignUp;
+export default UpdateProfile;
