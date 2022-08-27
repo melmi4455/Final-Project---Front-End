@@ -9,6 +9,7 @@ function Protect(){
     
 
     const {info} = useContext(InfoContext)
+    console.log(info)
     
 
     return info? <Outlet/> : <Navigate to="/login"/>

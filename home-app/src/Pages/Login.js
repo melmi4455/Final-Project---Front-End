@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
-import {useEffect} from "react"
+// import {useEffect} from "react"
 
 
 
@@ -14,9 +14,9 @@ function Login() {
   const navigate = useNavigate();
   const {setInfo} = useContext(InfoContext);
 
-//   useEffect(()=>{
-//     const token = localStorage.removeItem("token");
-//   }, []);
+  // useEffect(()=>{
+  //   const token = localStorage.removeItem("token");
+  // }, []);
 
   async function bySubmit() {
     try {
@@ -57,13 +57,13 @@ function Login() {
                 </div>
             </div>
             </div>
-    </div>
+            </div>
     )
-}
 
 
 
+    };
+  
+  
 
-
-
-export default Login
+export default Login;

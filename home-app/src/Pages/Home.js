@@ -8,6 +8,7 @@ function Home() {
     <div>
       {/* hero section */}
       <Hero />
+
       {/* FeatureCars */}
       <div className="px-20 py-5">
         <h2 className="text-center font-bold text-3xl py-10">
@@ -30,14 +31,6 @@ function Home() {
       <HowItWorks />
     </div>
   );
-
-
-       
-        
-        
-    
-
-
 }
 
 export default Home;

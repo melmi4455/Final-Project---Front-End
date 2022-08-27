@@ -9,15 +9,20 @@ import UpdateProfile from "./Pages/Owner/UpdateProfile";
 import NewHome from "./Pages/Owner/NewHome";
 import PropertyList from "./Pages/PropertyList";
 import Protect from "./Protect"
-import Footer from "./Components/Footer";
+import Footer from "./Components/Footer.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import About from "./Components/About";
 import Login from "./Pages/Login";
 import axios from "axios";
+
+
 function App() {
 const [info,setInfo] = useState(false);
-useEffect(()=>{
+const [loading,setLoading]=useState(true);
+useEffect(() =>
+{
+  
   const token = localStorage.getItem("token");
   axios.get("http://localhost:7000/user/check", {
     headers:{authentication:token},
@@ -27,7 +32,11 @@ useEffect(()=>{
   .catch((e)=>{
     setInfo(false);
   });
+  setLoading(false);
 }, []);
+if(loading) return <h1>Loading ...</h1>;
+console.log(info)
+
 
   return (
     <div>
@@ -39,11 +48,11 @@ useEffect(()=>{
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/list" element={<PropertyList />} />
-          <Route path="/owner" >
+          <Route path="/owner" element={<Protect />}  >
           <Route path="updateprofile" element ={<UpdateProfile/>} />
-          <Route path="newhome" element = {<NewHome/>} /></Route>
+          <Route path="NewHome" element={<NewHome />} />
+          </Route>
           
-         
         </Routes>
 
         <About />
@@ -63,7 +72,9 @@ useEffect(()=>{
       </BrowserRouter>
       </InfoContext.Provider>
     </div>
-  );
-}
+    )
+    }
+  
+
 
 export default App;
