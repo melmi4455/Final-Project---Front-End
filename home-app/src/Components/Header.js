@@ -1,13 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { InfoContext } from "../Utilities/InfoContext";
-
-
+import { UserContext } from "../Utils/UserContext";
 
 function Header() {
-const {info} = useContext(InfoContext)
-
+  const { user, setUser } = useContext(UserContext);
   return (
     <div className="flex justify-between items-center py-5 px-10 border bg-gray-50  text-lg text-blue-700">
       <div className="items-center ">
@@ -28,15 +25,17 @@ const {info} = useContext(InfoContext)
         </Link>
       </div>
       <div>
-        {info? (<button className="text-bold text-white bg-blue-500 rounded-full p-2">
-          <Link to="/owner/updateprofile">Your Profile</Link>
-        </button>):
-        (<button className="text-bold text-white bg-blue-500 rounded-md p-2">
-          <Link to="/SignUp">Upload Here!</Link>
-        </button>)  }
-        
-        
-      {/* <div className="space-x-2">
+        {user ? (
+          <button className="text-bold text-white bg-blue-500 rounded-full p-2">
+            <Link to="/owner/NewHome">Your Profile</Link>
+          </button>
+        ) : (
+          <button className="text-bold text-white bg-blue-500 rounded-md p-2">
+            <Link to="/SignUp">Register</Link>
+          </button>
+        )}
+
+        {/* <div className="space-x-2">
         <button className="text-bold text-white bg-blue-500 rounded-md p-2">
           <Link to="/SignUp">SignUp</Link>
         </button>

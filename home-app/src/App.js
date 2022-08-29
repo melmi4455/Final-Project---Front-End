@@ -1,80 +1,72 @@
 import "./App.css";
-import {useState,useEffect} from "react"
-import { InfoContext } from "./Utilities/InfoContext";
+import { useState, useEffect } from "react";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import SignUp from "./Pages/SignUp";
-import UpdateProfile from "./Pages/Owner/UpdateProfile";
-import NewHome from "./Pages/Owner/NewHome";
+// import UpdateProfile from "./Pages/UpdateProfile";
+import NewHome from "./Pages/NewHome";
 import PropertyList from "./Pages/PropertyList";
-import Protect from "./Protect"
+import Protect from "./Protect";
 import Footer from "./Components/Footer.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import About from "./Components/About";
 import Login from "./Pages/Login";
 import axios from "axios";
-
+import { UserContext } from "./Utils/UserContext";
 
 function App() {
-const [info,setInfo] = useState(false);
-const [loading,setLoading]=useState(true);
-useEffect(() =>
-{
-  
-  const token = localStorage.getItem("token");
-  axios.get("http://localhost:7000/user/check", {
-    headers:{authentication:token},
-  }).then(()=> {
-    setInfo(true);
-  })
-  .catch((e)=>{
-    setInfo(false);
-  });
-  setLoading(false);
-}, []);
-if(loading) return <h1>Loading ...</h1>;
-console.log(info)
+  const [user, setUser] = useState();
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    //check if user is signup
+    //if user is signup setuser  true
 
+    const token = localStorage.getItem("token");
+    if (token) {
+      setUser(true);
+    }
+    setLoading(false);
+  }, []);
+
+  if (loading) return <h3>loading</h3>;
 
   return (
     <div>
-      <InfoContext.Provider value={{info,setInfo}}>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/list" element={<PropertyList />} />
-          <Route path="/owner" element={<Protect />}  >
-          <Route path="updateprofile" element ={<UpdateProfile/>} />
-          <Route path="NewHome" element={<NewHome />} />
-          </Route>
-          
-        </Routes>
+      <UserContext.Provider value={{ user, setUser }}>
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/PropertyList" element={<PropertyList />} />
 
-        <About />
-        <Footer />
+            <Route path="/owner/NewHome" element={<Protect />} />
+            <Route path="/owner/NewHome" element={<NewHome />} />
+            {/* </Route> */}
+          </Routes>
 
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
-      </BrowserRouter>
-      </InfoContext.Provider>
+          {/* <About /> */}
+          <Footer />
+
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
+        </BrowserRouter>
+      </UserContext.Provider>
     </div>
-    )
-    }
-  
-
+  );
+}
 
 export default App;

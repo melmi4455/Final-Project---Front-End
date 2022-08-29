@@ -8,7 +8,7 @@ const Hero = () => {
           <h3 className="font-bold p-2 text-4xl text-white">
             Find a Rent when you want at the right price
           </h3>
-          <div className="flex">
+          <div className="flex p-6">
             <div className="flex item-center bg-white p-2">
               <FaSearch size={20} className="mr-3 text-blue-400" />
               <input
