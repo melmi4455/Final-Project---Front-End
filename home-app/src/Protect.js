@@ -8,7 +8,7 @@ function Protect(){
 
     
 
-    const {info} = useContext(InfoContext)
+    const {info} = useContext(InfoContext);
     console.log(info)
     
 
