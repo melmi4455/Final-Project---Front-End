@@ -1,9 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 function NewHome() {
   const [input, setInput] = useState({});
+  const navigate = useNavigate();
 
   async function Upload() {
     try {
@@ -11,6 +13,7 @@ function NewHome() {
       formData.append("city", input.city);
       formData.append("district", input.district);
       formData.append("rooms", input.rooms);
+      formData.append("bedRooms", input.bedRooms);
       formData.append("price", input.price);
       formData.append("phone", input.phone);
       formData.append("address", input.address);
@@ -18,12 +21,21 @@ function NewHome() {
       formData.append("image", input.image);
 
       // console.log(formData);
-      const res = await axios.post("http://localhost:7000/property", formData);
+      const token = localStorage.getItem("token");
+      console.log(token);
+      const res = await axios.post("http://localhost:7000/property", formData, {
+        headers: {
+          authorization: token,
+        },
+      });
+
+      navigate("/");
       console.log(res);
       toast.success(res.data.message);
     } catch (e) {
-      toast.error(e.response.data.message);
-      console.log(e.response.data.message);
+      console.log(e.message);
+      // toast.error(e.response.data.message);
+      console.log(e.message);
     }
   }
   return (
@@ -52,6 +64,12 @@ function NewHome() {
             placeholder="No. of Rooms"
             className=" m-2 p-1 txt-lg outline-none"
             onChange={(e) => setInput({ ...input, rooms: e.target.value })}
+          />
+          <input
+            type="Number"
+            placeholder="Bedrooms"
+            className=" m-2 p-1 txt-lg outline-none"
+            onChange={(e) => setInput({ ...input, bedRooms: e.target.value })}
           />
           <input
             type="Number"

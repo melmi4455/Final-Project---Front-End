@@ -1,12 +1,22 @@
 import React from "react";
-
-// import HomeDetails from "../Components/HomeDetails";
-
-import HomeDetails from "../Components/HomeDetails";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 import ListCard from "../Components/ListCard";
 
 const PropertyList = () => {
+  const [property, setProperty] = useState([]);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    axios
+      .get("http://localhost:7000/property/", {
+        headers: {
+          authorization: token,
+        },
+      })
+      .then((res) => setProperty(res.data.data));
+  }, []);
+  // console.log(property);
   return (
     <div>
       <div className="flex flex-col justify-center items-center py-20 ">
@@ -65,8 +75,13 @@ const PropertyList = () => {
           </div>
         </div>
       </div>
-      <ListCard />
-      <HomeDetails />
+      <div className="flex justify-center ">
+        <div className="grid grid-cols-4 gap-2 ">
+          {property.map((found) => (
+            <ListCard data={found} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

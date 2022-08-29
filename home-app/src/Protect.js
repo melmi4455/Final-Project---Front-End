@@ -1,18 +1,12 @@
-import {useContext} from "react"
-import { InfoContext } from "./Utilities/InfoContext" 
-import {Navigate,Outlet} from "react-router-dom"
+import { useContext } from "react";
+import { UserContext } from "./Utils/UserContext";
+import { Navigate, Outlet } from "react-router-dom";
 
 
+function Protect() {
+  const { user } = useContext(UserContext);
+  return user ? <Outlet /> : <Navigate to="/SignUp" />;
 
-function Protect(){
-
-    
-
-    const {info} = useContext(InfoContext);
-    console.log(info)
-    
-
-    return info? <Outlet/> : <Navigate to="/login"/>
 }
 
 export default Protect;

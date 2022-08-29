@@ -1,32 +1,31 @@
 import axios from "axios";
-import React, { useState , useEffect } from "react";
-import {Link} from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useContext } from "react";
-import { InfoContext } from "../Utilities/InfoContext";
+import { UserContext } from "../Utils/UserContext";
 
 const SignUp = () => {
   const [input, setInput] = useState({});
   const navigate = useNavigate();
-  const{setInfo} = useContext(InfoContext);
+  const { setUser } = useContext(UserContext);
 
   // useEffect(()=>{
   //   const token = localStorage.removeItem("token");
   // }, []);
-  
 
   async function Submit() {
+   ;
     try {
       const res = await axios.post("http://localhost:7000/user/", input);
       console.log(res);
       toast.success(res.data.message);
-      localStorage.setItem("token" , res.data.token);
-      navigate("/owner/newhome");
-      setInfo(true);
+      localStorage.setItem("token", res.data.token);
+      navigate("/");
+      setUser(true);
 
-
-      navigate("/home");
+      navigate("/");
     } catch (e) {
       toast.error(e.response.data.message);
     }
@@ -40,7 +39,7 @@ const SignUp = () => {
             type="text"
             placeholder="Full Name"
             className="px-3 py-1 rounded-sm outline-none"
-            onChange={(e) => setInput({ ...input, name: e.target.value })}
+            onChange={(e) => setInput({ ...input, Name: e.target.value })}
           />
           <input
             type="email"
@@ -82,10 +81,15 @@ const SignUp = () => {
             onChange={(e) => setInput({ ...input, address: e.target.value })}
           />
         </div>
-        <button className="text-center text-blue-500 rounded-md font-bold bg-white p-2 color-white" onClick={Submit}>
+        <button
+          className="text-center text-blue-500 rounded-md font-bold bg-white p-2 color-white"
+          onClick={Submit}
+        >
           Submit
         </button>
-        <div className="pt-2 text-white font-bold">Already have an account? <Link to="/login">Log in here!</Link></div>
+        <div className="pt-2 text-white font-bold">
+          Already have an account? <Link to="/login">Log in here!</Link>
+        </div>
       </div>
     </div>
   );
