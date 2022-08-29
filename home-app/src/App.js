@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import SignUp from "./Pages/SignUp";
 // import UpdateProfile from "./Pages/UpdateProfile";
-import NewHome from "./Pages/NewHome";
+import NewHome from "./Pages/Owner/NewHome";
 import PropertyList from "./Pages/PropertyList";
 import Protect from "./Protect";
 import Footer from "./Components/Footer.js";
@@ -44,9 +44,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/PropertyList" element={<PropertyList />} />
 
-            <Route path="/owner/NewHome" element={<Protect />} />
-            <Route path="/owner/NewHome" element={<NewHome />} />
-            {/* </Route> */}
+            <Route path="/owner" element={<Protect />} >
+            <Route path="newhome" element={<NewHome />} />
+            </Route>
           </Routes>
 
           {/* <About /> */}

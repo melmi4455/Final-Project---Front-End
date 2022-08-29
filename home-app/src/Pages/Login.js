@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-// import { useContext } from "react";
-// import { InfoContext } from "../Utilities/InfoContext";
+import { useContext } from "react";
+import { UserContext } from "../Utils/UserContext";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -8,9 +8,10 @@ import axios from "axios";
 // import {useEffect} from "react"
 
 function Login() {
+  const {setUser} = useContext(UserContext);
   const [input, setInput] = useState({});
   const navigate = useNavigate();
-  // const { setInfo } = useContext(InfoContext);
+
 
   // useEffect(()=>{
   //   const token = localStorage.removeItem("token");
@@ -22,10 +23,11 @@ function Login() {
       console.log(res);
       toast.success(res.data.message);
       localStorage.setItem("token", res.data.token);
-      navigate("/Home");
-      // setInfo(true);
+      navigate("/");
+      setUser(true);
     } catch (e) {
       toast.error(e.response.data.message);
+      console.log(e)
     }
   }
 

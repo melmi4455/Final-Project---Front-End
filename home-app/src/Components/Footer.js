@@ -10,7 +10,7 @@ function Footer() {
             <h3>House Rentals</h3>
             <h3>House Buyings</h3>
           </div>
-          <div className="">
+          <div className=" flex flex-col items-center">
             <h2 className="font-bold text-lg pb-2 pt-8">Blog</h2>
             <h3>House Sales</h3>
             <h3>House Rentals</h3>
@@ -21,7 +21,7 @@ function Footer() {
             <h3>HomeApp@email.com</h3>
             <h3>+2526344556677</h3>
           </div>
-          <div className="flex flex-col items-center space-y-3 pt-3">
+          <div className="flex flex-col items-center space-y-3 pt-3 pl-80">
             <BsFacebook size={20} />
             <BsWhatsapp size={20} />
             <BsTwitter size={20} />
