@@ -2,6 +2,7 @@ import FeatureCars from "../Components/FeatureCars";
 import HowItWorks from "../Components/HowItWorks";
 import Hero from "../Components/Hero";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -20,7 +21,9 @@ function Home() {
           <FeatureCars />
           <FeatureCars />
           <div className="flex items-center pl-5 ">
-            <FaArrowRight size={30} className=" text-blue-700" />
+            <Link to="/PropertyList">
+              <FaArrowRight size={30} className=" text-blue-700" />
+            </Link>
           </div>
         </div>
       </div>

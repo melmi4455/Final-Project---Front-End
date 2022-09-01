@@ -44,12 +44,16 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/PropertyList" element={<PropertyList />} />
 
-            <Route path="/owner" element={<Protect />} >
-            <Route path="newhome" element={<NewHome />} />
+            <Route path="/owner" element={<Protect />}>
+              <Route path="newhome" element={<NewHome />} />
             </Route>
+
+            <Route path="/NewHome" element={<Protect />} />
+            <Route path="/owner/NewHome" element={<NewHome />} />
+            {/* </Route> */}
           </Routes>
 
-          {/* <About /> */}
+          <About />
           <Footer />
 
           <ToastContainer
