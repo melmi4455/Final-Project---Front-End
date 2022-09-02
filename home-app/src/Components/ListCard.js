@@ -1,58 +1,38 @@
 import React from "react";
 import { BsStar } from "react-icons/bs";
+import { FaBed } from "react-icons/fa";
+import { GoLocation } from "react-icons/go";
+import { HiCurrencyDollar } from "react-icons/hi";
 const ListCard = ({ data }) => {
   return (
-    // LISTS CARDS
-    <div className="flex justify-center items-center">
-      <div
-        className="flex justify-center items-center   w-72 min-h-[10rem] 
-    shadow-lg rounded-md overflow-hidden   "
-      >
-        <div className="rounded-t-2xl ">
+    <div>
+      <div className="flex flex-col justify-center  bg-white drop-shadow-lg shadow-lg rounded-md overflow-hidden">
+        {/* descriptions */}
+        <div className=" ">
+          <img
+            className="w-64 min-h-[10rem]  rounded-sm object-cover"
+            src={`http://localhost:7000/${data.image}`}
+            alt="homecard "
+          />
           <div>
-            <img
-              src={`http://localhost:7000/${data.image}`}
-              alt="homecard "
-              className="w-72"
-            />
-          </div>
-
-          {/* descriptions */}
-          <div className="p-5 rounded-t-3xl ">
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <h1 className="text-2xl font-bold">{data.city}</h1>
-                <p className="text-sm"> {data.district}</p>
+            <div className="grid grid-cols-2 gap-4 rounded-lg bg-gray-100 p-3 w-72">
+              <div className=" text-2xl  ">{data.city}</div>
+              <div className="flex items-center pl-10">
+                <HiCurrencyDollar />
+                {data.price}
               </div>
-
-              <div className="flex flex-1 space-x-1 pl-12">
-                <p>4.5</p>
-                <BsStar size={20} className="text-yellow-400" />
+              <div className="flex items-center space-x-3">
+                <GoLocation />
+                {data.address}
               </div>
             </div>
-
-            <div className="flex justify-between space-x-2 py-2 text-sm font-bold">
-              <h3 className="border border-blue-700 rounded-md p-1">
-                Rooms{data.rooms}
-              </h3>
-              <h3 className="border border-blue-700 rounded-md p-1">
-                {data.bethrooms}Bathrooms
-              </h3>
-              <h3 className="border border-blue-700 rounded-md p-1">24 sqr</h3>
+            <div className="text-md text-gray-500 p-3">
+              <h4 className="font-bold text-md">Description </h4>
+              {data.description}
             </div>
 
-            <div className="space-y-3">
-              <h2>{data.description}</h2>
-              <p className="text-sm font-bold ">
-                ${data.price}
-                <span className="text-sm font-light">/Month</span>
-              </p>
-
-              <div className="flex justify-center items-center">
-                <button className="rounded-lg bg-blue-600 text-white px-5">
-                  Contact owner
-                </button>
-              </div>
+            <div className="flex items-center pl-20 py-4">
+              <button className="bg-blue-500 rounded-lg p-1">Book now</button>
             </div>
           </div>
         </div>
