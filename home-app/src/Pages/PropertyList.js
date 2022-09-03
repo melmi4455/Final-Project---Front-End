@@ -16,7 +16,7 @@ const PropertyList = () => {
       })
       .then((res) => setProperty(res.data.data));
   }, []);
-  // console.log(property);
+  console.log(property);
   return (
     <div>
       <div className="flex flex-col justify-center items-center py-20 ">
@@ -45,7 +45,7 @@ const PropertyList = () => {
                 />
               </div>
               <div className=" ">
-                <input type="text" placeholder="$349" />
+                <input type="text" placeholder="$350" />
               </div>
             </div>
           </div>
@@ -73,6 +73,9 @@ const PropertyList = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <h1 className="font-bold pt-10">We have found {property.length} houses you uploaded</h1>
         </div>
       </div>
       <div className="flex justify-center ">

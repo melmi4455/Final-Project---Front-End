@@ -3,7 +3,7 @@ import React from "react";
 const HomeDetails = () => {
   return (
     <div className="flex justify-center py-20">
-      <div className="flex justify-center items-center shadow-lg rounded-2xl border">
+      <div className="flex justify-center items-center shadow-lg rounded-2xl border w-1/3">
         <div className="flex flex-col justify-center items-center ">
           <img
             src={require("../img/home1.jpg")}

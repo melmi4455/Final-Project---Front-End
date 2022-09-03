@@ -6,7 +6,10 @@ import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import SignUp from "./Pages/SignUp";
 // import UpdateProfile from "./Pages/UpdateProfile";
+import HomeDetails from "./Components/HomeDetails";
 import NewHome from "./Pages/Owner/NewHome";
+import AllHomes from "./Pages/Owner/AllHomes";
+import EditHome from "./Pages/Owner/EditHome";
 import PropertyList from "./Pages/PropertyList";
 import Protect from "./Protect";
 import Footer from "./Components/Footer.js";
@@ -43,9 +46,13 @@ function App() {
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/PropertyList" element={<PropertyList />} />
+            <Route path="/homedetails" element={<HomeDetails />} />
+
 
             <Route path="/owner" element={<Protect />} >
             <Route path="newhome" element={<NewHome />} />
+            <Route path="allhomes" element={<AllHomes />} />
+            <Route path="edithome/:id" element={<EditHome />} />
             </Route>
           </Routes>
 

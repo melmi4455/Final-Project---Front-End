@@ -1,6 +1,27 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import axios from 'axios';
 import { BsStar } from "react-icons/bs";
-const ListCard = ({ data }) => {
+import {useEffect} from 'react'
+const ListCard2 = ({ data }) => {
+    const navigate = useNavigate();
+
+    async function Delete()  {
+        try{
+            const res = await axios.delete(`http://localhost:7000/property/${data._id}`);
+            navigate("/owner/allhomes")
+        } catch(e){
+            console.log(e)
+        }
+        
+        
+       
+
+    }
+
+
+
   return (
     // LISTS CARDS
     <div className="flex justify-center items-center">
@@ -48,9 +69,13 @@ const ListCard = ({ data }) => {
                 <span className="text-sm font-light">/Month</span>
               </p>
 
-              <div className="flex justify-center items-center">
+              <div className="flex grid grid-cols-2 justify-center items-center gap-1">
+                <Link to= {`/owner/edithome/${data._id}`}>
                 <button className="rounded-lg bg-blue-600 text-white px-5">
-                  Contact owner
+                  Edit 
+                </button></Link>
+                <button className="rounded-lg bg-blue-600 text-white px-5" onClick={Delete}>
+                 Delete 
                 </button>
               </div>
             </div>
@@ -61,4 +86,4 @@ const ListCard = ({ data }) => {
   );
 };
 
-export default ListCard;
+export default ListCard2;

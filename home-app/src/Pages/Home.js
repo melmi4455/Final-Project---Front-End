@@ -1,9 +1,24 @@
 import FeatureCars from "../Components/FeatureCars";
+import ListCard from "../Components/ListCard";
 import HowItWorks from "../Components/HowItWorks";
 import Hero from "../Components/Hero";
 import { FaArrowRight } from "react-icons/fa";
+import axios from "axios";
+import {useEffect , useState} from "react"
 
-function Home() {
+const Home =() => {
+  const [property, setProperty] = useState([]);
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    axios
+      .get("http://localhost:7000/property/", {
+        headers: {
+          authorization: token,
+        },
+      })
+      .then((res) => {
+      setProperty(res.data.data)});
+  }, []);
   return (
     <div>
       {/* hero section */}
@@ -15,10 +30,12 @@ function Home() {
           Find the best property
         </h2>
         <div className=" flex justify-center ">
+          {/* <FeatureCars />
           <FeatureCars />
-          <FeatureCars />
-          <FeatureCars />
-          <FeatureCars />
+          <FeatureCars /> */}
+          {property.map((found) => (
+            <ListCard data={found} />
+          ))}
           <div className="flex items-center pl-5 ">
             <FaArrowRight size={30} className=" text-blue-700" />
           </div>

@@ -18,9 +18,9 @@ const SignUp = () => {
   async function Submit() {
    ;
     try {
-      const res = await axios.post("http://localhost:7000/user/", input);
+      const res = await axios.post("http://localhost:7000/user/signup", input);
       console.log(res);
-      toast.success(res.data.message);
+      toast.success(res.data.message); 
       localStorage.setItem("token", res.data.token);
       navigate("/");
       setUser(true);
