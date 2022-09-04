@@ -3,8 +3,10 @@ import ListCard from "../Components/ListCard";
 import HowItWorks from "../Components/HowItWorks";
 import Hero from "../Components/Hero";
 import { FaArrowRight } from "react-icons/fa";
-import axios from "axios";
+import axios from "axios"
 import {useEffect , useState} from "react"
+import { Link } from "react-router-dom";
+
 
 const Home =() => {
   const [property, setProperty] = useState([]);
@@ -29,7 +31,7 @@ const Home =() => {
         <h2 className="text-center font-bold text-3xl py-10">
           Find the best property
         </h2>
-        <div className=" flex justify-center ">
+        <div className=" flex justify-center gap-x-5">
           {/* <FeatureCars />
           <FeatureCars />
           <FeatureCars /> */}
@@ -37,7 +39,9 @@ const Home =() => {
             <ListCard data={found} />
           ))}
           <div className="flex items-center pl-5 ">
-            <FaArrowRight size={30} className=" text-blue-700" />
+            <Link to="/PropertyList">
+              <FaArrowRight size={30} className=" text-blue-700" />
+            </Link>
           </div>
         </div>
       </div>

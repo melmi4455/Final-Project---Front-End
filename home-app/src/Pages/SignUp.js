@@ -16,7 +16,6 @@ const SignUp = () => {
   // }, []);
 
   async function Submit() {
-   ;
     try {
       const res = await axios.post("http://localhost:7000/user/signup", input);
       console.log(res);
@@ -25,7 +24,7 @@ const SignUp = () => {
       navigate("/");
       setUser(true);
 
-      navigate("/");
+      navigate("/Home");
     } catch (e) {
       toast.error(e.response.data.message);
     }

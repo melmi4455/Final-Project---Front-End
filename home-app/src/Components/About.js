@@ -20,7 +20,7 @@ const About = () => {
           className="grid grid-cols-2 gap-10 bg-white text-gray-700 w-3/4 min-h-[10rem] 
         shadow-lg rounded-md overflow-hidden "
         >
-          <div className="flex  items-center space-x-2 px-3 py-2 border border-r-yellow-500 ">
+          <div className="flex  items-center space-x-2 px-3 py-2 border border-r-yellow-700 ">
             <RiNumber1 size={20} className="text-blue-500 rounded-full" />
 
             <div>

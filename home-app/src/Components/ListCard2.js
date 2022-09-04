@@ -69,10 +69,10 @@ const ListCard2 = ({ data }) => {
                 <span className="text-sm font-light">/Month</span>
               </p>
 
-              <div className="flex grid grid-cols-2 justify-center items-center gap-1">
+              <div className="flex grid grid-cols-2 justify-center items-center w-full">
                 <Link to= {`/owner/edithome/${data._id}`}>
-                <button className="rounded-lg bg-blue-600 text-white px-5">
-                  Edit 
+                <button className="rounded-lg bg-blue-600 text-white px-12">
+                  Edit   
                 </button></Link>
                 <button className="rounded-lg bg-blue-600 text-white px-5" onClick={Delete}>
                  Delete 

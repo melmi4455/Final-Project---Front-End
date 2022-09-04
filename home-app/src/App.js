@@ -48,15 +48,16 @@ function App() {
             <Route path="/PropertyList" element={<PropertyList />} />
             <Route path="/homedetails" element={<HomeDetails />} />
 
-
             <Route path="/owner" element={<Protect />} >
             <Route path="newhome" element={<NewHome />} />
             <Route path="allhomes" element={<AllHomes />} />
             <Route path="edithome/:id" element={<EditHome />} />
+
             </Route>
+            {/* </Route> */}
           </Routes>
 
-          {/* <About /> */}
+          <About />
           <Footer />
 
           <ToastContainer
