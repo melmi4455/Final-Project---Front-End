@@ -8,7 +8,6 @@ import ListCard2 from '../../Components/ListCard2';
 const AllHomes = () => {
 
     const[myHomes,setMyHomes] = useState([]);
-    console.log(myHomes)
     useEffect(()=> {
         const token = localStorage.getItem("token");
         axios.get("http://localhost:7000/property/usersHouses",{

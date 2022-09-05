@@ -68,7 +68,7 @@ const PropertyList = () => {
         </div>
       </div>
       <div className="flex justify-center p-10">
-        <div className="grid grid-cols-4 w-3/4 gap-10 ">
+        <div className="grid grid-cols-4 w-fit gap-10 ">
           {property.map((found) => (
             <ListCard data={found} />
           ))}

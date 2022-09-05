@@ -43,67 +43,67 @@ function NewHome() {
       <div className="bg-blue-500 w-2/3 mt-20 rounded-md p-4">
         <div className="flex justify-center">
           <h1 className="font-bold text-2xl text-white">
-            Please fill this form
+            Upload a new house
           </h1>
         </div>
         <div className="grid grid-cols-2 mt-10">
           <input
             type="text"
-            placeholder="City"
-            className="m-2 p-1 text-lg outline-none"
+            placeholder=" City"
+            className="m-2 p-1 text-lg outline-none rounded-md"
             onChange={(e) => setInput({ ...input, city: e.target.value })}
           />
           <input
             type="text"
-            placeholder="District"
-            className=" m-2 p-1 text-lg outline-none"
+            placeholder=" District"
+            className=" m-2 p-1 text-lg outline-none rounded-md"
             onChange={(e) => setInput({ ...input, district: e.target.value })}
           />
           <input
             type="Number"
-            placeholder="No. of Rooms"
-            className=" m-2 p-1 txt-lg outline-none"
+            placeholder=" No. of Rooms"
+            className=" m-2 p-1 text-lg outline-none rounded-md"
             onChange={(e) => setInput({ ...input, rooms: e.target.value })}
           />
           <input
             type="Number"
-            placeholder="Bedrooms"
-            className=" m-2 p-1 txt-lg outline-none"
+            placeholder=" Bedrooms"
+            className=" m-2 p-1 text-lg outline-none rounded-md"
             onChange={(e) => setInput({ ...input, bedRooms: e.target.value })}
           />
           <input
             type="Number"
-            placeholder="Price"
-            className=" m-2 p-1 text-lg outline-none"
+            placeholder=" Price"
+            className=" m-2 p-1 text-lg outline-none rounded-md"
             onChange={(e) => setInput({ ...input, price: e.target.value })}
           />
           <input
             type="number"
-            placeholder="Phone Number"
-            className=" m-2 p-1 text-lg outline-none"
+            placeholder=" Phone Number"
+            className=" m-2 p-1 text-lg outline-none rounded-md"
             onChange={(e) => setInput({ ...input, phone: e.target.value })}
           />
           <input
             type="text"
-            placeholder="Address"
-            className=" m-2 p-1 text-lg outline-none"
+            placeholder=" Address"
+            className=" m-2 p-1 text-lg outline-none rounded-md"
             onChange={(e) => setInput({ ...input, address: e.target.value })}
           />
           <textarea
-            placeholder="Description"
-            className="m-2 w-fit text-lg pr-40"
+            placeholder=" Description"
+            className="m-2 w-fit text-lg pr-40 rounded-md"
             onChange={(e) =>
               setInput({ ...input, description: e.target.value })
             }
           ></textarea>
           <input
             type="file"
-            className=" m-2 p-1 text-lg outline-none"
+            className=" m-2 p-1 text-lg outline-none rounded-md"
             onChange={(e) => setInput({ ...input, image: e.target.files[0] })}
           />
         </div>
         <div className="flex justify-center ">
-          <button className="text-center border-2 color-white" onClick={Upload}>
+          <button className="text-bold text-blue-500 font-bold text-blue-500 bg-white rounded-md p-2" onClick={Upload}>
             Upload
           </button>
         </div>

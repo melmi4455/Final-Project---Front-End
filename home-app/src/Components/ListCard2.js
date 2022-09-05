@@ -6,6 +6,7 @@ import { BsStar } from "react-icons/bs";
 import {useEffect} from 'react'
 const ListCard2 = ({ data }) => {
     const navigate = useNavigate();
+    
 
     async function Delete()  {
         try{
@@ -15,7 +16,7 @@ const ListCard2 = ({ data }) => {
             console.log(e)
         }
         
-        
+        console.log(data)
        
 
     }
@@ -57,9 +58,9 @@ const ListCard2 = ({ data }) => {
                 Rooms={data.rooms}
               </h3>
               <h3 className="border border-blue-700 rounded-md p-1">
-                {data.bethrooms}Bathrooms
+                {data.address}
               </h3>
-              <h3 className="border border-blue-700 rounded-md p-1">24 sqr</h3>
+              <h3 className="border border-blue-700 rounded-md p-1">{data.phone}</h3>
             </div>
 
             <div className="space-y-3">

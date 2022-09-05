@@ -46,7 +46,7 @@ function EditHome() {
       
       const token = localStorage.getItem("token");
       console.log(token);
-      const res = await axios.post("http://localhost:7000/property", formData, {
+      const res = await axios.put(`http://localhost:7000/property/${id}`, formData, {
         headers: {
           authorization: token,
         },
@@ -56,7 +56,7 @@ function EditHome() {
       console.log(res);
       toast.success(res.data.message);
     } catch (e) {
-      console.log(e.message);
+      console.log(e);
       // toast.error(e.response.data.message);
       console.log(e.message);
     }
@@ -134,7 +134,7 @@ function EditHome() {
           />
         </div>
         <div className="flex justify-center ">
-          <button className="text-center border-2 color-white" onClick={Upload}>
+          <button className="text-bold text-blue-500 font-bold text-blue-500 bg-white rounded-md p-2" onClick={Upload}>
             Update
           </button>
         </div>

@@ -11,7 +11,7 @@ const Hero = () => {
           </span>
           Find new & <br></br> featured property located{" "}
           <span className="text-blue-400">
-            in your local cit <br></br>{" "}
+            in your local city <br></br>{" "}
           </span>
         </h3>
         <div className=" flex justify-center pb-10 ">

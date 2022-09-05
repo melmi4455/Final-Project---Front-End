@@ -30,47 +30,50 @@ function Login() {
       console.log(e)
     }
   }
+    
 
-  return (
-    <div className="flex justify-center">
-      <div className="bg-blue-500 w-1/3 mt-20 rounded-md drop-shadow-lg">
-        <div className="flex justify-center font-bold text-2xl mt-2 text-gray-100">
-          Login
-        </div>
-        <div>
-          <div className="flex flex-col w-auto items-center pt-10 pb-10 space-y-2">
-            <input
-              type="text"
-              placeholder="Username/Email"
-              className="rounded-sm px-3 py-1"
-              onChange={(e) => setInput({ ...input, email: e.target.value })}
-            ></input>
-            <input
-              type="password"
-              placeholder="Password"
-              className="rounded-sm px-3 py-1"
-              onChange={(e) => setInput({ ...input, password: e.target.value })}
-            ></input>
-            <div className="pl-60  text-gray-100 text-md">Forgot Password?</div>
-          </div>
 
-          <div className="flex justify-center text-white  mb-2 text-md mb-3">
-            <button
-              className="font-bold text-blue-500 bg-white rounded-md p-2"
-              onClick={bySubmit}
-            >
-              LOGIN
-            </button>
-          </div>
-          <div className="flex justify-center mb-5">
-            <p className="text-gray-100 text-lg font-bold">
-              Don't have an account?<Link to="/signup">Sign Up here!</Link>
-            </p>
+return (
+
+      {/* component */}
+      
+      ,<div className="py-26 bg-white">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-lg mx-auto bg-blue-500 p-4 mt-4 rounded-md">
+            <div className="text-center mb-8">
+              <a className="inline-block mx-auto mb-6" href="#">
+                <img src="nigodo-assets/logo-icon-nigodo.svg" alt="" />
+              </a>
+              <h2 className="text-3xl md:text-2xl font-extrabold mb-2 text-white">Sign in</h2>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="mb-6">
+                <div className="block mb-2 font-extrabold text-white">Email</div>
+                <input className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-white rounded text-blue-500" type="email" 
+                  onChange={(e) => setInput({ ...input, email: e.target.value })} />
+              </div>
+              <div className="mb-6">
+                <div className="block mb-2 font-extrabold text-white">Password</div>
+                <input className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-white rounded text-blue-500" type="password" 
+                  onChange={(e) => setInput({ ...input, password: e.target.value })} />
+              </div>
+              <div className="flex flex-wrap -mx-4 mb-6 items-center justify-between">
+                <div className="w-full lg:w-auto px-4 mb-4 lg:mb-0">
+                  <div>
+                    {/* <input type="checkbox" />
+                    <span className="ml-1 font-extrabold">Remember me</span> */}
+                  </div>
+                </div>
+                {/* <div className="w-full lg:w-auto px-4"><a className="inline-block font-extrabold hover:underline" href="#">Forgot your password?</a></div> */}
+              </div>
+              <button className="inline-block w-1/2 py-4 px-6 mb-6 text-center text-lg leading-6 text-blue-500 font-extrabold bg-white  border-3 border-white shadow rounded transition duration-200 border-blue-500" onClick={bySubmit}>Sign in</button>
+              <p className="text-center font-bold text-white">Dont have an account? <Link to="/signup"><a className="text-white hover:underline text-lg font-bold" href="#"> Sign up</a></Link></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
 }
+
 
 export default Login;
