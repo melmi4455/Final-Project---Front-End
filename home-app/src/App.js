@@ -5,9 +5,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import SignUp from "./Pages/SignUp";
+
+
+
 // import UpdateProfile from "./Pages/UpdateProfile";
 import HomeDetails from "./Components/HomeDetails";
-import NewHome from "./Pages/Owner/NewHome";
+
+
 import AllHomes from "./Pages/Owner/AllHomes";
 import EditHome from "./Pages/Owner/EditHome";
 import PropertyList from "./Pages/PropertyList";
@@ -19,6 +23,9 @@ import About from "./Components/About";
 import Login from "./Pages/Login";
 import axios from "axios";
 import { UserContext } from "./Utils/UserContext";
+
+
+// import house context propiver
 
 function App() {
   const [user, setUser] = useState();
@@ -45,6 +52,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
+
             <Route path="/PropertyList" element={<PropertyList />} />
             <Route path="/homedetails/:id" element={<HomeDetails />} />
 
@@ -53,7 +61,12 @@ function App() {
             <Route path="allhomes" element={<AllHomes />} />
             <Route path="edithome/:id" element={<EditHome />} />
 
+
+            <Route path="/NewHome" element={<Protect />} />
+            <Route path="/owner/NewHome" element={<NewHome />} />
+        
             </Route>
+
             {/* </Route> */}
           </Routes>
 
