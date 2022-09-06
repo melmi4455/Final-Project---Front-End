@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../Utils/UserContext";
 import { CgLogOut } from "react-icons/cg";
+import axios from "axios";
 
 function Header() {
   const { user, setUser } = useContext(UserContext);

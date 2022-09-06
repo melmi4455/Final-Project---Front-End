@@ -3,6 +3,9 @@ import HowItWorks from "../Components/HowItWorks";
 import Hero from "../Components/Hero";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
+import { useState } from "react";
 
 function Home() {
   return (

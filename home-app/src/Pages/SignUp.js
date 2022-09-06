@@ -17,7 +17,7 @@ const SignUp = () => {
 
   async function Submit() {
     try {
-      const res = await axios.post("http://localhost:7000/user/", input);
+      const res = await axios.post("http://localhost:7000/user/signUp", input);
       console.log(res);
       toast.success(res.data.message);
       localStorage.setItem("token", res.data.token);
@@ -31,7 +31,7 @@ const SignUp = () => {
   }
   return (
     <div className="flex justify-center mt-6 ">
-      <div className="bg-blue-400 w-2/5 text-center py-4 drop-shadow-md">
+      <div className="bg-gray-100 w-2/5 text-center py-4 drop-shadow-md shadow-lg">
         <h1>SignUp</h1>
         <div className="flex flex-col w-3/5 m-auto space-y-2 my-4">
           <input
@@ -86,7 +86,7 @@ const SignUp = () => {
         >
           Submit
         </button>
-        <div className="pt-2 text-white font-bold">
+        <div className="pt-2 text-black ">
           Already have an account? <Link to="/login">Log in here!</Link>
         </div>
       </div>

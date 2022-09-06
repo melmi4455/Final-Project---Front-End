@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+
 import { BiSearch } from "react-icons/bi";
 import axios from "axios";
 
@@ -7,6 +8,8 @@ import ListCard from "../Components/ListCard";
 import Hero from "../Components/Hero";
 
 const PropertyList = () => {
+  // fetch properties data
+
   const [property, setProperty] = useState([]);
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -19,6 +22,19 @@ const PropertyList = () => {
       .then((res) => setProperty(res.data.data));
   }, []);
   // console.log(property);
+
+  // search property
+  async function Filter() {
+    const [query, setQuery] = useState();
+    const [search, setSearch] = useState([]);
+
+    // search property
+
+    const res = await axios.get("http://localhost:7000/property/");
+    setSearch(res.data);
+  }
+  // fetch properties data
+
   return (
     <div>
       <div className="bg-[url('./img/feature.jpg')] bg-bottom bg-no-repeat bg-cover h-[450px] w-full flex justify-center items-center ">
@@ -33,34 +49,22 @@ const PropertyList = () => {
           </h3>
           <div className=" flex justify-center  ">
             <div className="flex justify-center  bg-gray-50  w-3/4 m-h-[10rem] rounded-lg p-2 space-x-5 ">
-              <div className="input  ">
-                <h4>City/street</h4>
-                <input
-                  type="text"
-                  placeholder=" location..."
-                  className="border border-gray-300 outline-none"
-                />
+              <div className="input  flex justify-center items-center ">
+                <div className="flex flex-col">
+                  <h4>City/street</h4>
+
+                  <input
+                    type="text"
+                    placeholder=" xafada..."
+                    className="border border-gray-300 outline-none"
+                  />
+                </div>
               </div>
-              <div className="input ">
-                <h4>property type</h4>
-                <input
-                  type="text"
-                  placeholder=" property type..."
-                  className=" border border-r-yellow-500 outline-none"
-                />
-              </div>
-              <div className="input">
-                <h4>Price range</h4>
-                <input
-                  type="text"
-                  placeholder=" price... "
-                  className="border border-gray-300 outline-none"
-                />
-              </div>
-              <div className="flex items-center pl-20 space-x-3 ">
+
+              <div className="flex flex-end items-center pl-20 space-x-3 ">
                 <h4 className="text-black font-bold">Advanced filter</h4>
                 <button className=" bg-blue-600 p-5 rounded-lg">
-                  <BiSearch size={20} className="text-white" />
+                  <BiSearch size={20} className="text-white" onClick={Filter} />
                 </button>
               </div>
             </div>
