@@ -5,8 +5,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import Header from "./Components/Header";
 import SignUp from "./Pages/SignUp";
-import MyLists from "./Pages/Owner/MyLists";
-import NewHome from "./Pages/Owner/NewHome";
+
+
+
+// import UpdateProfile from "./Pages/UpdateProfile";
+import HomeDetails from "./Components/HomeDetails";
+
+
+import AllHomes from "./Pages/Owner/AllHomes";
+import EditHome from "./Pages/Owner/EditHome";
 import PropertyList from "./Pages/PropertyList";
 import Protect from "./Protect";
 import Footer from "./Components/Footer.js";
@@ -16,7 +23,7 @@ import About from "./Components/About";
 import Login from "./Pages/Login";
 import axios from "axios";
 import { UserContext } from "./Utils/UserContext";
-import OwnerPage from "./Pages/Owner/OwnerPage";
+
 
 // import house context propiver
 
@@ -47,14 +54,19 @@ function App() {
             <Route path="/login" element={<Login />} />
 
             <Route path="/PropertyList" element={<PropertyList />} />
+            <Route path="/homedetails/:id" element={<HomeDetails />} />
 
-            <Route path="/owner" element={<Protect />}>
-              <Route path="newhome" element={<NewHome />} />
-            </Route>
+            <Route path="/owner" element={<Protect />} >
+            <Route path="newhome" element={<NewHome />} />
+            <Route path="allhomes" element={<AllHomes />} />
+            <Route path="edithome/:id" element={<EditHome />} />
+
 
             <Route path="/NewHome" element={<Protect />} />
             <Route path="/owner/NewHome" element={<NewHome />} />
-            <Route path="/owner/MyLists" element={<MyLists />} />
+        
+            </Route>
+
             {/* </Route> */}
           </Routes>
 
