@@ -16,6 +16,7 @@ const AllHomes = () => {
             }
         }).then((res)=> setMyHomes(res.data.Houses));
         
+        
     },[]);
 
            

@@ -52,7 +52,7 @@ function EditHome() {
         },
       });
 
-      navigate("/");
+      navigate("/owner/allhomes");
       console.log(res);
       toast.success(res.data.message);
     } catch (e) {
