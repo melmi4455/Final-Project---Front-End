@@ -11,6 +11,7 @@ import NewHome from "./Pages/Owner/NewHome";
 import AllHomes from "./Pages/Owner/AllHomes";
 import EditHome from "./Pages/Owner/EditHome";
 import PropertyList from "./Pages/PropertyList";
+import Filtered from "./Pages/Filtered";
 import Protect from "./Protect";
 import Footer from "./Components/Footer.js";
 import { ToastContainer } from "react-toastify";
@@ -47,6 +48,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/PropertyList" element={<PropertyList />} />
             <Route path="/homedetails/:id" element={<HomeDetails />} />
+            <Route path="/Filtered" element = {<Filtered/>} />
 
             <Route path="/owner" element={<Protect />} >
             <Route path="newhome" element={<NewHome />} />

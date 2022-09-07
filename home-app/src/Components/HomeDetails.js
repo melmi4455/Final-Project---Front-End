@@ -33,11 +33,13 @@ const HomeDetails = () => {
         <div className="flex justify-center py-20">
           <div className="flex justify-center items-center shadow-lg rounded-2xl border ">
             <div className="flex flex-col justify-center items-center ">
+              <div>
               <img
                 src={`http://localhost:7000/${input.image}`}
                 alt="home"
                 className="w-96 h-52 border-2 shadow-md rounded-md w-full"
               />
+              </div>
               <div className="rounded-3xl p-2 ">
                 <h3 className="font-bold">Magaalada {input.city}</h3>
                 <p className="font-bold">{input.district}</p>

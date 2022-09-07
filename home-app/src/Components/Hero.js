@@ -2,17 +2,20 @@ import axios from "axios";
 import React from "react";
 import {useState} from 'react'
 import { BiSearch } from "react-icons/bi";
+import Filtered from '../Pages/Filtered'
 const Hero = () => {
 
-  const [city,setCity] = useState({});
+  const [city,setCity] = useState("");
+  const [filter,setFilter] = useState({});
 
    async function get(){
     try{
-      const res= await axios.get("http://localhost:7000/property/filter", {city});
-      console.log(res)
+      const res= await axios.get(`http://localhost:7000/property/filter/${city}`);
+      setFilter(res.data);
+      console.log(filter)
     }
     catch(e){
-      console.log(e)
+      console.log(e);
     }
    
 
