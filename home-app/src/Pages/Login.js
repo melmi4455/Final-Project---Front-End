@@ -29,8 +29,6 @@ function Login() {
       console.log(e);
     }
   }
-    
-
 
   return (
     <div className="flex justify-center p-10">
@@ -69,17 +67,14 @@ function Login() {
               Already Have An Account?{" "}
               <span class="underline cursor-pointer"> SignUp</span>
             </p>
-
-
-
-
-    
+          </div>
+        </div>
 
         <div className="w-20 h-40 absolute bg-blue-500 rounded-full bottom-20 right-10 transform rotate-45 hidden md:block"></div>
         <div className="w-20 h-40 absolute bg-blue-400 rounded-full bottom-20 left-10 transform rotate-45 hidden md:block"></div>
       </div>
-    );
+    </div>
+  );
 }
-
 
 export default Login;

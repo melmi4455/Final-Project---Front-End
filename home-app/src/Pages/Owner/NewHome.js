@@ -34,7 +34,7 @@ function NewHome() {
       toast.success(res.data.message);
     } catch (e) {
       console.log(e.message);
-      // toast.error(e.response.data.message);
+      toast.error(e.response.data.message);
       console.log(e.message);
     }
   }
@@ -42,9 +42,7 @@ function NewHome() {
     <div className="flex justify-center">
       <div className="bg-blue-500 w-2/3 mt-20 rounded-md p-4">
         <div className="flex justify-center">
-          <h1 className="font-bold text-2xl text-white">
-            Upload a new house
-          </h1>
+          <h1 className="font-bold text-2xl text-white">Upload a new house</h1>
         </div>
         <div className="grid grid-cols-2 mt-10">
           <input
@@ -103,7 +101,10 @@ function NewHome() {
           />
         </div>
         <div className="flex justify-center ">
-          <button className="text-bold text-blue-500 font-bold text-blue-500 bg-white rounded-md p-2" onClick={Upload}>
+          <button
+            className="text-bold text-blue-500 font-bold text-blue-500 bg-white rounded-md p-2"
+            onClick={Upload}
+          >
             Upload
           </button>
         </div>

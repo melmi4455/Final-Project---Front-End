@@ -1,17 +1,15 @@
-import FeatureCars from "../Components/FeatureCars";
+// import FeatureCars from "../Components/FeatureCars";
 import ListCard from "../Components/ListCard";
 import HowItWorks from "../Components/HowItWorks";
 import Hero from "../Components/Hero";
 import { FaArrowRight } from "react-icons/fa";
-import axios from "axios"
-import {useEffect , useState} from "react"
-import { Link } from "react-router-dom";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import { toast } from "react-toastify";
-import { useState } from "react";
 
-
-const Home =() => {
+const Home = () => {
   const [property, setProperty] = useState([]);
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -22,7 +20,8 @@ const Home =() => {
         },
       })
       .then((res) => {
-      setProperty(res.data.data)});
+        setProperty(res.data.data);
+      });
   }, []);
   return (
     <div>
@@ -56,6 +55,6 @@ const Home =() => {
       <HowItWorks />
     </div>
   );
-}
+};
 
 export default Home;

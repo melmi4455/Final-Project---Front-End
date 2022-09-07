@@ -17,22 +17,16 @@ const SignUp = () => {
 
   async function Submit() {
     try {
-
       const res = await axios.post("http://localhost:7000/user/signUp", input);
 
-     
-
       console.log(res);
-      toast.success(res.data.message); 
+      toast.success(res.data.message);
       localStorage.setItem("token", res.data.token);
       navigate("/");
       setUser(true);
-
-      ;
     } catch (e) {
       toast.error(e.response.data.message);
     }
-
   }
   return (
     <div className="flex justify-center mt-6 ">
@@ -93,12 +87,10 @@ const SignUp = () => {
         </button>
         <div className="pt-2 text-black ">
           Already have an account? <Link to="/login">Log in here!</Link>
-
-  } 
-
-
-
-    );
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default SignUp;
