@@ -17,7 +17,9 @@ function Header() {
   return (
     <div className="flex justify-between items-center py-5 px-10   text-lg text-black border border-b-blue-700">
       <div className="items-center ">
+        <Link to="/owner/updateprofile">
         <img src="../Logo.jpg" alt="images" className="h-20" />
+        </Link>
       </div>
 
       <div className="space-x-5 cursor-pointer font-extrabold text-blue-500">

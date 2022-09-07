@@ -11,7 +11,6 @@ import NewHome from "./Pages/Owner/NewHome";
 import AllHomes from "./Pages/Owner/AllHomes";
 import EditHome from "./Pages/Owner/EditHome";
 import PropertyList from "./Pages/PropertyList";
-import Filtered from "./Pages/Filtered";
 import Protect from "./Protect";
 import Footer from "./Components/Footer.js";
 import { ToastContainer } from "react-toastify";
@@ -20,6 +19,7 @@ import About from "./Components/About";
 import Login from "./Pages/Login";
 import axios from "axios";
 import { UserContext } from "./Utils/UserContext";
+import UpdateProfile from "./Pages/Owner/UpdateProfile";
 
 function App() {
   const [user, setUser] = useState();
@@ -48,12 +48,13 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/PropertyList" element={<PropertyList />} />
             <Route path="/homedetails/:id" element={<HomeDetails />} />
-            <Route path="/Filtered" element = {<Filtered/>} />
+            
 
             <Route path="/owner" element={<Protect />} >
             <Route path="newhome" element={<NewHome />} />
             <Route path="allhomes" element={<AllHomes />} />
             <Route path="edithome/:id" element={<EditHome />} />
+            <Route path="updateprofile" element={<UpdateProfile/>} />
 
             </Route>
             {/* </Route> */}
