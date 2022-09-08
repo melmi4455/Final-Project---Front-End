@@ -1,26 +1,34 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { renderMatches, useNavigate} from "react-router-dom";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { BsStar } from "react-icons/bs";
 import {useEffect} from 'react'
+import { toast } from "react-toastify";
 const ListCard2 = ({ data }) => {
     const navigate = useNavigate();
     
+    
 
     async function Delete()  {
+      
         try{
-            const res = await axios.delete(`http://localhost:7000/property/${data._id}`);
-            navigate("/owner/allhomes")
+          
+            const res= await axios.delete(`http://localhost:7000/property/${data._id}`);
+            
+            navigate("/owner/allhomes");
+            console.log(res);
+            toast.success(res.data.message);
+             
+            
         } catch(e){
             console.log(e)
         }
         
-        console.log(data)
-       
-
     }
 
+    
+    
 
 
   return (

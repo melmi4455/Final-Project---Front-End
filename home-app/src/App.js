@@ -20,6 +20,7 @@ import About from "./Components/About";
 import Login from "./Pages/Login";
 
 import { UserContext } from "./Utils/UserContext";
+import UpdateProfile from "./Pages/Owner/UpdateProfile";
 
 // import house context propiver
 
@@ -50,6 +51,17 @@ function App() {
             <Route path="/login" element={<Login />} />
 
             <Route path="/PropertyList" element={<PropertyList />} />
+
+
+            <Route path="/homedetails/:id" element={<HomeDetails />} />
+            
+
+            <Route path="/owner" element={<Protect />} >
+            <Route path="newhome" element={<NewHome />} />
+            <Route path="allhomes" element={<AllHomes />} />
+            <Route path="edithome/:id" element={<EditHome />} />
+            <Route path="updateprofile" element={<UpdateProfile/>} />
+
 
             <Route path="/owner" element={<Protect />}>
               <Route path="newhome" element={<NewHome />} />
