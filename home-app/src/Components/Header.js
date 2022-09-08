@@ -31,9 +31,6 @@ function Header() {
         <Link to="/Abouts" className="text-xl hover:border-b-4">
           Abouts
         </Link>
-        <Link to="/owner/newhome" className="text-xl hover:border-b-4 text-white bg-blue-500 p-2 rounded-full">
-          Upload!
-        </Link>
       </div>
       <div className="flex items-center space-x-8 font-extrabold">
         {user ? (
@@ -45,6 +42,12 @@ function Header() {
             <Link to="/SignUp">Register</Link>
           </button>
         )}
+        <Link
+          to="/owner/newhome"
+          className="text-xl hover:border-b-4 text-white bg-blue-500 p-2 rounded-full"
+        >
+          Upload!
+        </Link>
 
         {/* <div className="space-x-2">
         <button className="text-bold text-white bg-blue-500 rounded-md p-2">
@@ -56,7 +59,11 @@ function Header() {
         </button>
       </div> */}
         <div>
-          <CgLogOut size={25} onClick={Logout} className="cursor-pointer text-blue-500" />
+          <CgLogOut
+            size={25}
+            onClick={Logout}
+            className="cursor-pointer text-blue-500"
+          />
         </div>
       </div>
     </div>
