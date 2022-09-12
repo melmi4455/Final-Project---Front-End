@@ -64,8 +64,10 @@ function Login() {
               LogIn
             </button>
             <p className="mt-4 text-sm">
-              Already Have An Account?{" "}
-              <span class="underline cursor-pointer"> SignUp</span>
+              <Link to="/SignUp" className="text-md text-black font-bold">
+                Create new Account?
+                <span class="underline cursor-pointer"> SignUp</span>
+              </Link>
             </p>
           </div>
         </div>

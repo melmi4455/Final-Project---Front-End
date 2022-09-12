@@ -33,7 +33,7 @@ const Home = () => {
         <h2 className="text-center font-bold text-3xl py-10">
           Find the best property
         </h2>
-        <div className=" flex flex-wrap grid grid-cols-4 justify-center gap-x-5 gap-y-5 ">
+        <div className="  grid grid-cols-4 justify-center gap-x-5 gap-y-5 ">
           {/* <FeatureCars />
           <FeatureCars />
           <FeatureCars /> */}
@@ -43,7 +43,6 @@ const Home = () => {
           <div className="flex items-center pl-5 ">
             <Link to="/PropertyList">
               <FaArrowRight size={30} className=" text-blue-700" />
-              <p className="text-blue-700 text-lg font-extrabold">View All</p>
             </Link>
           </div>
         </div>

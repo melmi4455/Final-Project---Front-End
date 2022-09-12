@@ -7,7 +7,7 @@ import Header from "./Components/Header";
 import SignUp from "./Pages/SignUp";
 
 // import UpdateProfile from "./Pages/UpdateProfile";
-
+import HomeDetails from "./Pages/HomeDetails";
 import AllHomes from "./Pages/Owner/AllHomes";
 import NewHome from "./Pages/Owner/NewHome";
 import EditHome from "./Pages/Owner/EditHome";
@@ -52,16 +52,13 @@ function App() {
 
             <Route path="/PropertyList" element={<PropertyList />} />
 
-
             <Route path="/homedetails/:id" element={<HomeDetails />} />
-            
 
-            <Route path="/owner" element={<Protect />} >
+            {/* <Route path="/owner" element={<Protect />} >
             <Route path="newhome" element={<NewHome />} />
             <Route path="allhomes" element={<AllHomes />} />
             <Route path="edithome/:id" element={<EditHome />} />
-            <Route path="updateprofile" element={<UpdateProfile/>} />
-
+            <Route path="updateprofile" element={<UpdateProfile/>} /> */}
 
             <Route path="/owner" element={<Protect />}>
               <Route path="newhome" element={<NewHome />} />

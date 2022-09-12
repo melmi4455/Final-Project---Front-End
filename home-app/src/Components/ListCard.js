@@ -1,34 +1,21 @@
 import React from "react";
 import axios from "axios";
-import {Link, useNavigate} from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom";
 import { BsStar } from "react-icons/bs";
 import { FaBed } from "react-icons/fa";
 import { GoLocation } from "react-icons/go";
 import { HiCurrencyDollar } from "react-icons/hi";
 const ListCard = ({ data }) => {
-  
   const navigate = useNavigate();
-    
 
-    async function Get(res)  {
-        try{
-            const res = await axios.get(`http://localhost:7000/property/${data._id}`);
-            navigate("/homedetails")
-        } catch(e){
-            console.log(e)
-        }
-        
-        
-       
-
+  async function Get(res) {
+    try {
+      const res = await axios.get(`http://localhost:7000/property/${data._id}`);
+      navigate("/homedetails");
+    } catch (e) {
+      console.log(e);
     }
-
-
-
-
-
-
-
+  }
 
   return (
     <div>
@@ -58,8 +45,10 @@ const ListCard = ({ data }) => {
             </div>
 
             <div className="flex items-center p-20 py-4">
-              <Link to={`/homedetails/${data._id}`}>
-              <button className="bg-blue-500 rounded-lg p-1 text-white font-bold" >More Details</button>
+              <Link to={`/Homedetails/${data._id}`}>
+                <button className="bg-blue-500 rounded-lg p-1 text-white font-bold">
+                  More Details
+                </button>
               </Link>
             </div>
           </div>

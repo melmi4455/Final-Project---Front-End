@@ -6,7 +6,7 @@ const FeatureCars = () => {
   return (
     <div className="p-2 flex ">
       <div
-        className="gird grid-cols-4  bg-white text-gray-700 w-72 min-h-[10rem] 
+        className="grid grid-cols-4  bg-white text-gray-700 w-72 min-h-[10rem] 
         shadow-lg rounded-md overflow-hidden"
       >
         <div

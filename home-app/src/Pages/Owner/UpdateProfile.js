@@ -1,6 +1,6 @@
 import axios from "axios";
-import React, { useState , useEffect } from "react";
-import {Link} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -11,14 +11,18 @@ const UpdateProfile = () => {
   async function Submit() {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.put("http://localhost:7000/user/updateprofile", input , {
-        headers:{
-            authorization:token,
+      const res = await axios.put(
+        "http://localhost:7000/user/updateprofile",
+        input,
+        {
+          headers: {
+            authorization: token,
+          },
         }
-    });
+      );
       console.log(res);
       toast.success(res.data.message);
-    //   localStorage.setItem("token" , res.data.token);
+      //   localStorage.setItem("token" , res.data.token);
       navigate("/");
     } catch (e) {
       toast.error(e.response.data.message);
@@ -45,7 +49,9 @@ const UpdateProfile = () => {
             type="password"
             placeholder=" Old Password"
             className="px-3 py-1 rounded-sm outline-none"
-            onChange={(e) => setInput({ ...input, oldPassword: e.target.value })}
+            onChange={(e) =>
+              setInput({ ...input, oldPassword: e.target.value })
+            }
           />
           <input
             type="password"
@@ -68,7 +74,10 @@ const UpdateProfile = () => {
             onChange={(e) => setInput({ ...input, address: e.target.value })}
           /> */}
         </div>
-        <button className="text-center text-blue-500 rounded-md font-bold bg-white p-2 color-white" onClick={Submit}>
+        <button
+          className="text-center text-blue-500 rounded-md font-bold bg-white p-2 color-white"
+          onClick={Submit}
+        >
           Update
         </button>
         {/* <div className="pt-2 text-white font-bold">Already have an account? <Link to="/login">Log in here!</Link></div> */}
