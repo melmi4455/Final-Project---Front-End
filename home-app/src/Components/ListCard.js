@@ -15,7 +15,7 @@ const ListCard = ({ data }) => {
             const res = await axios.get(`http://localhost:7000/property/${data._id}`);
             navigate("/homedetails")
         } catch(e){
-            console.log(e)
+            console.log(e);
         }
         
         
@@ -31,6 +31,7 @@ const ListCard = ({ data }) => {
 
 
   return (
+
     <div>
       <div className="flex flex-col justify-center  bg-white drop-shadow-lg shadow-lg rounded-md overflow-hidden">
         {/* descriptions */}

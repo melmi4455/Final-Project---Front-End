@@ -2,6 +2,7 @@ import React from "react";
 import { RiNumber1, RiNumber2, RiNumber3, RiNumber4 } from "react-icons/ri";
 
 const About = () => {
+  
   return (
     <div className="px-20 py-20 ">
       <div className="flex flex-col justify-center items-center shadow-sm w-full">

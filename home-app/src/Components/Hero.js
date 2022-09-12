@@ -7,6 +7,7 @@ const Hero = () => {
 
   const [city,setCity] = useState("");
   const [filter,setFilter] = useState({});
+  
 
    async function get(){
     try{
