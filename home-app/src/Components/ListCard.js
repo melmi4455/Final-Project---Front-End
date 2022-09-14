@@ -32,7 +32,7 @@ const ListCard = ({ data }) => {
 
   return (
 
-    <div>
+    <div className="text-blue-700">
       <div className="flex flex-col justify-center  bg-white drop-shadow-lg shadow-lg rounded-md overflow-hidden">
         {/* descriptions */}
         <div className=" ">
@@ -53,14 +53,14 @@ const ListCard = ({ data }) => {
                 {data.address}
               </div>
             </div>
-            <div className="text-md text-gray-500 p-3 items-center">
+            <div className="text-md text-blue-600 p-3 items-center">
               <h4 className="font-bold text-md">Description </h4>
               {data.description}
             </div>
 
             <div className="flex items-center p-20 py-4">
               <Link to={`/homedetails/${data._id}`}>
-              <button className="bg-blue-500 rounded-lg p-1 text-white font-bold" >More Details</button>
+              <button className="bg-blue-500 rounded-lg p-1 text-white font-bold drop-shadow-lg" >More Details</button>
               </Link>
             </div>
           </div>

@@ -24,15 +24,15 @@ const PropertyList = () => {
       <div className="bg-[url('./img/feature.jpg')] bg-bottom bg-no-repeat bg-cover h-[450px] w-full flex justify-center items-center ">
         <div className="w-full m-h-[10rem]">
           <h3 className="text-center text-white text-3xl font-bold pb-24 ">
-            Search Your Next Home{" "}
+           A Full List of Houses availabe{" "}
             <span>
-              Find new <span className="text-blue-500">& </span>
-              featured <br></br>property located in your{" "}
-              <span className="text-blue-500"> local city</span>
+              Find Houses  <span className="text-blue-500">& </span>
+              for Rent <br></br> located in your{" "}
+              <span className="text-blue-500"> prefered locations</span>
             </span>
           </h3>
           <div className=" flex justify-center  ">
-            <div className="flex justify-center  bg-gray-50  w-3/4 m-h-[10rem] rounded-lg p-2 space-x-5 ">
+            {/* <div className="flex justify-center  bg-gray-50  w-3/4 m-h-[10rem] rounded-lg p-2 space-x-5 ">
               <div className="input  ">
                 <h4>City/street</h4>
                 <input
@@ -63,12 +63,12 @@ const PropertyList = () => {
                   <BiSearch size={20} className="text-white" />
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       <div className="flex justify-center p-10">
-        <div className="grid grid-cols-4 w-fit gap-10 ">
+        <div className="grid grid-cols-4 w-fit gap-10 drop-shadow-lg ">
           {property.map((found) => (
             <ListCard data={found} />
           ))}

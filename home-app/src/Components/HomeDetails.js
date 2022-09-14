@@ -30,9 +30,9 @@ const HomeDetails = () => {
   
   return (
     
-        <div className="flex justify-center py-20">
+        <div className="flex justify-center py-20 text-blue-600">
           <div className="flex justify-center items-center shadow-lg rounded-2xl border ">
-            <div className="flex flex-col justify-center items-center ">
+            <div className="flex flex-col justify-center items-center">
               <div>
               <img
                 src={`http://localhost:7000/${input.image}`}
@@ -44,22 +44,22 @@ const HomeDetails = () => {
                 <h3 className="font-bold">Magaalada {input.city}</h3>
                 <p className="font-bold">{input.district}</p>
                 <div className="grid grid-cols-3 gap-3 mt-2">
-                  <button className=" border border-blue-800 text-gray-700 text-sm font-bold rounded-md ">
+                  <button className=" border border-blue-800 text-blue-600 text-sm font-bold rounded-md ">
                   Rooms=
                   {input.rooms}
                   </button>
-                  <button className="border border-blue-800 text-gray-700 text-sm font-bold rounded-md p-1">
+                  <button className="border border-blue-800 text-blue-600text-sm font-bold rounded-md p-1">
                     Area = {input.address}
                   </button>
-                  <button className="border border-blue-900 text-gray-700 text-sm font-bold rounded-md p-1">
+                  <button className="border border-blue-900 text-blue-600 text-sm font-bold rounded-md p-1">
                     Phone = {input.phone}
                   </button>
                 </div>
                 <div className="flex flex-col justify-center items-center">
                   {/* Description */}
                   <h3 className="text-xl font-bold">{input.description}</h3>
-                  <h2 className="text-xl text-gray-900 font-bold">${input.price}/month</h2>
-                  <button className="bg-blue-500 font-bold text-white text-sm px-1 py-2 mt-3 mb-2 rounded-md">
+                  <h2 className="text-xl text-blue-600 font-extrabold">${input.price}/month</h2>
+                  <button className="bg-blue-500 font-bold text-white text-sm px-1 py-2 mt-3 mb-2 rounded-md drop-shadow-lg">
                     Contact Owner
                   </button>
                 </div>

@@ -39,7 +39,7 @@ const ListCard2 = ({ data }) => {
     shadow-lg rounded-md overflow-hidden   "
       >
         <div className="rounded-t-2xl ">
-          <div>
+          <div className="w-full">
             <img
               src={`http://localhost:7000/${data.image}`}
               alt="homecard "

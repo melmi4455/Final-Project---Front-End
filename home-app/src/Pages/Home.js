@@ -72,13 +72,13 @@ const Home =() => {
           </span>
         </h3>
         <div className=" flex justify-center pb-10 ">
-          <div className="flex justify-center  bg-gray-50  w-2/4 m-h-[10rem] rounded-lg p-2 space-x-5 ">
+          <div className="flex justify-center  bg-white  w-2/4 m-h-[10rem] rounded-lg p-2 space-x-5 drop-shadow-lg border border-lg border-blue-600">
             <div className="input">
-              <h4>city</h4>
+              <h4 className="font-bold pb-2 text-blue-600 text-lg">City</h4>
               <input
               value={city}
                 type="text"
-                placeholder=" location..."
+                placeholder=" Please enter location..."
                 className="border border-gray-300 outline-none"
                 onChange={(e)=>setCity(e.target.value)} />
             </div>
@@ -99,7 +99,7 @@ const Home =() => {
               />
             </div> */}
             <div className="flex items-center pl-20 space-x-3 ">
-              <h4 className="text-black font-bold">Advanced filter</h4>
+              <h4 className="text-blue-600 font-extrabold text-lg">Advanced filter</h4>
               <button className=" bg-blue-600 p-2 rounded-full" onClick={get}>
                 <BiSearch size={20} className="text-white" />
               </button>
@@ -114,18 +114,18 @@ const Home =() => {
 
       {/* FeatureCars */}
       <div className="px-20 py-5">
-        <h2 className="text-center font-bold text-3xl py-10">
+        <h2 className="text-center text-blue-600 font-extrabold text-3xl py-10">
           Find the best property
         </h2>
         {filter? (
-          <div className="flex flex-wrap grid grid-cols-4 justify-center gap-x-5 gap-y-5 ">
+          <div className="flex flex-wrap grid grid-cols-4 justify-center gap-x-5 gap-y-5 drop-shadow-lg ">
           {/* <FeatureCars />
           <FeatureCars />
           <FeatureCars /> */}
           {filter.map((found) => (
             <ListCard data={found} />
           ))}</div>):(
-            <div className="flex flex-wrap grid grid-cols-4 justify-center gap-x-5 gap-y-5 ">
+            <div className="flex flex-wrap grid grid-cols-4 justify-center gap-x-5 gap-y-5 drop-shadow-lg ">
           {/* <FeatureCars />
           <FeatureCars />
           <FeatureCars /> */}
@@ -145,7 +145,7 @@ const Home =() => {
         
       </div>
       {/* How it work */}
-      <h2 className="text-center font-bold text-2xl pt-20 py-2">
+      <h2 className="text-center text-blue-600 text-2xl font-extrabold text-2xl pt-20 py-2">
         How it works
       </h2>
       <HowItWorks />
