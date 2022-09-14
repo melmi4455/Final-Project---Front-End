@@ -13,7 +13,7 @@ const Hero = () => {
     try{
       const res= await axios.get(`http://localhost:7000/property/filter/${city}`);
       setFilter(res.data);
-      console.log(filter)
+      console.log(filter);
     }
     catch(e){
       console.log(e);
