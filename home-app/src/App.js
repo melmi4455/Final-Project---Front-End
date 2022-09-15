@@ -69,7 +69,7 @@ function App() {
             {/* </Route> */}
           </Routes>
 
-          <About />
+          {/* <About /> */}
           <Footer />
 
           <ToastContainer

@@ -19,7 +19,7 @@ function Header() {
     <div className="flex justify-between items-center py-5 px-10   text-lg text-black border border-b-blue-700">
       <div className="items-center ">
         <Link to="/owner/updateprofile">
-        <img src="../Logo.jpg" alt="images" className="h-20" />
+          <img src="../Logo.jpg" alt="images" className="h-20" />
         </Link>
       </div>
 
@@ -36,17 +36,17 @@ function Header() {
       </div>
       <div className="flex items-center space-x-8 font-extrabold">
         {user ? (
-          <button className="text-bold text-white bg-blue-500 rounded-full p-2">
-            <Link to="/owner/allhomes">Your Profile</Link>
+          <button className="text-xl text-white bg-blue-400 rounded-md p-1">
+            <Link to="/Owner/AllHomes">My list</Link>
           </button>
         ) : (
-          <button className="text-bold text-white bg-blue-500 rounded-md p-2">
+          <button className="text-xl text-white bg-blue-400 rounded-md p-1">
             <Link to="/SignUp">Register</Link>
           </button>
         )}
         <Link
           to="/owner/newhome"
-          className="text-xl hover:border-b-4 text-white bg-blue-500 p-2 rounded-full"
+          className="text-xl hover:border-b-4 text-white bg-blue-400 p-1 rounded-md"
         >
           Upload!
         </Link>

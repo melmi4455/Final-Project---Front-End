@@ -1,24 +1,22 @@
 import axios from "axios";
 import { useState, useEffect, useNavigate } from "react";
 import { Link } from "react-router-dom";
+import AllHomesCard from "../../Components/AllHomesCard";
 import ListCard2 from "../../Components/ListCard2";
 
 const AllHomes = () => {
   const [myHomes, setMyHomes] = useState([]);
-  const navigate = useNavigate();
   useEffect(() => {
     const token = localStorage.getItem("token");
-    const res = axios
+    axios
       .get("http://localhost:7000/property/usersHouses", {
         headers: {
           authorization: token,
         },
       })
       .then((res) => setMyHomes(res.data.Houses));
-
-    console.log(res);
   }, []);
-  navigate("/AllHomes");
+
   return (
     <div className="w-full flex flex-col items-center gap-y-3">
       <div>
@@ -29,7 +27,7 @@ const AllHomes = () => {
       <div>
         <div className="grid grid-cols-1 gap-2 pb-3">
           {myHomes.map((found) => (
-            <ListCard2 data={found} />
+            <AllHomesCard data={found} />
           ))}
         </div>
       </div>

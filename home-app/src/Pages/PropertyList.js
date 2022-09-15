@@ -6,6 +6,7 @@ import axios from "axios";
 
 import ListCard from "../Components/ListCard";
 import Hero from "../Components/Hero";
+import HomeDetails from "./HomeDetails";
 
 const PropertyList = () => {
   // fetch properties data
